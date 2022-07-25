@@ -1,0 +1,5 @@
+﻿  SM2_project.cpp
+D:\VS2022\SM2_project\SM2_project\SM2_project.cpp(33,41): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS2022\SM2_project\SM2_project\SM2_project.cpp(72): warning C4172: 返回局部变量或临时变量的地址: temp
+D:\VS2022\SM2_project\SM2_project\SM2_project.cpp(161): warning C4172: 返回局部变量或临时变量的地址: _key
+  SM2_project.vcxproj -> D:\VS2022\SM2_project\x64\Debug\SM2_project.exe
