@@ -1,0 +1,7 @@
+﻿  sm3_test.cpp
+D:\VS2022\sm3\sm3\sm3.h(30,2): warning C4091: “static ”: 没有声明变量时忽略“const <unnamed-enum-A>”的左侧
+D:\VS2022\sm3\sm3\sm3.h(170,16): warning C4018: “<”: 有符号/无符号不匹配
+D:\VS2022\sm3\sm3\sm3.h(208,19): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS2022\sm3\sm3\sm3_test.cpp(48,50): warning C4267: “初始化”: 从“size_t”转换到“unsigned int”，可能丢失数据
+D:\VS2022\sm3\sm3\sm3_test.cpp(57,22): warning C4018: “<”: 有符号/无符号不匹配
+  sm3.vcxproj -> D:\VS2022\sm3\x64\Debug\sm3.exe
