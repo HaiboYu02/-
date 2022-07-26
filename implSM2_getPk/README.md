@@ -7,16 +7,13 @@
   
   调用密码学库gmssl可以完成国密算法sm2的签名验证过程，但需要编写不分函数实现sm2的密钥生成过程，这一部分关键在于定义椭圆曲线上的加法运算和点与数字的乘法运算。
   
-  根据SM2签名的特定表达式可以从签名(r,s)中推导出Pk的表达式。
+  根据SM2签名的特定表达式可以从签名(r,s)中推导出Pk的表达式。由签名值s =((1 +d_A)^{-1}·(k-r·d_A))mod n, 公钥P_A =d_A·G 可推得 P_A = (r+s)^{-1}(kG-sG) kG=(x1,y1)可由式 r =(e+x1)mod n求出 (kG)_x =x1 =(r-e) mod n。在标准的SM2签名中也会用到公钥信息做哈希，但是在gmssl中实现时SM2签名就是字节类型消息转化为int类型得到，所以可以从SM2签名中获得公钥，完整的SM2签名可以抵抗这种获得公钥的方法。
   
 ## 运行指导
-  修改宏定义的变量version的值为1或2一次运行main函数，得到关于相同明文的密文。将注释部分取消注释也可对比二者运行速度。
+  直接运行整个py文件即可。
   
 ## 运行截图
-  SM4 Ttable实现方法：
   
-  ![image](https://github.com/HaiboYu02/img-storage/blob/main/pic7.png)
+  ![image](https://github.com/HaiboYu02/img-storage/blob/main/pic9.png)
   
-  原始SM4实现方法：
-  
-  ![image](https://github.com/HaiboYu02/img-storage/blob/main/pic8.png)
+  先打印出协商的公钥值，打印计算过程中的几个关键参数，最后得到破解的公钥值，对比之后有1/2的概率是一致，因为利用二次剩余求kG的纵坐标时求出的是两个二次剩余中随机的一个，多调试几次总会有一致的时候。
