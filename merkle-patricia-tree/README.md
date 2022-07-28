@@ -8,11 +8,9 @@
 
   在nodejs的以下路径中可以看到该库的所有实现源码...\nodejs\node_global\node_modules\merkle-patricia-tree\src，与上传的部分相同。该程序作为官方标注库，实现过程较为严谨和复杂。
 但还是可以看到Merkle Patricial Tree的实现思路：首先在trieNode.ts文件中定义了树中四种节点类型：BranchNode、ExtensionNode、LeafNode。各种节点中定义的方法不同，其中包括对
-key-value
-对的处理。以BranchNode节点为例:
+key-value对的处理。以BranchNode节点为例:
 
   '''javascript
-  
   export class BranchNode {
     _branches: (EmbeddedNode | null)[]
     _value: Buffer | null
@@ -73,10 +71,9 @@ key-value
       return children
     }
   }
-
   '''
 
-  类中包含两个字段变量 **\_branches** 、 **\_value** 
+  类中包含两个字段变量 **\_branches** 、**\_value** 
   
   一个简单的构造函数；
   
@@ -86,7 +83,7 @@ key-value
   
   * * *
   
-  另一个重要文件是baseTrie.ts，这里定义了Trie类，该文件是调用 _import { BaseTrie as Trie } from 'merkle-patricia-tree'_ 接口的内部实现。\_root字段变量代表的是根节点，异步get()是给定value取key，put()是在给定的key路径下存储一个value值，还有findPath(key: Buffer, throwIfMissing = false)寻找路径函数。其中还包括许多更高级的实现如通过哈希对节点加锁。更新和删除节点较复杂，都需要对TrieNode类型数组进行push等操作。
+  另一个重要文件是baseTrie.ts，这里定义了Trie类，该文件是调用 \_import { BaseTrie as Trie } from 'merkle-patricia-tree' 接口的内部实现。\_root字段变量代表的是根节点，异步get()是给定value取key，put()是在给定的key路径下存储一个value值，还有findPath(key: Buffer, throwIfMissing = false)寻找路径函数。其中还包括许多更高级的实现如通过哈希对节点加锁。更新和删除节点较复杂，都需要对TrieNode类型数组进行push等操作。
   
   以上均是对库的源代码进行简单的结构梳理的总结，所有的src文件均在该文章的同一个库中上传。
   
