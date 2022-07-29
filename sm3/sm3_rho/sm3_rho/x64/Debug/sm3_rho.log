@@ -1,0 +1,6 @@
+﻿  sm3_rho.cpp
+D:\VS2022\Code\sm3_rho\sm3_rho\sm3_rho.cpp(46,19): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+D:\VS2022\Code\sm3_rho\sm3_rho\sm3_rho.cpp(68,21): warning C4018: “<”: 有符号/无符号不匹配
+D:\VS2022\Code\sm3_rho\sm3_rho\sm3_rho.cpp(77,14): warning C4244: “初始化”: 从“__int64”转换到“int”，可能丢失数据
+D:\VS2022\Code\sm3_rho\sm3_rho\sm3_rho.cpp(61,8): warning C4101: “str”: 未引用的局部变量
+  sm3_rho.vcxproj -> D:\VS2022\Code\sm3_rho\x64\Debug\sm3_rho.exe
